@@ -1,0 +1,40 @@
+<center>
+<center><div align="right" class="container"><h3>Portfolios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="btn btn-default navbar-btn" ><%= link_to 'New Portfolio', new_status_path %></button></div></h3>
+
+
+ 
+
+<div class="panel panel-default container">
+ <div class="panel-heading"><h4>Latest Portfolio:</h4>
+</div>
+  <div class="panel-body">
+ <% str = Status.last %>
+<b><%= str.content%></b><br>
+Posted by <%= Status.last.name %> 
+
+  </div>
+</div>
+</br><br><br>
+
+
+    <% @statuses.each do |status| %>
+      <div class="panel panel-default container">
+     <div class="panel-heading"><h4><%= status.name %></h4></div>
+       <div class="panel-body"> <p><%= status.content %></p></div>
+        </div>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<button class="btn btn-default navbar-btn"> <%= link_to 'New Portfolio', new_status_path %> </button>
+<br><br><br>
+</center>
+
+
+

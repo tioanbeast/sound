@@ -1,0 +1,32 @@
+<center><div align="right" class="container"><h3>Crew Needed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="btn btn-default navbar-btn" ><%= link_to 'New Listing', new_list_path %></button></div></h3>
+
+<div class="panel panel-default container">
+ <div class="panel-heading"><h4>Latest Listing:</h4>
+</div>
+  <div class="panel-body">
+   <% st = List.last %>
+   <b><%= st.comment%></b><br>
+    Posted by <%= List.last.name %> 
+  </div>
+</div>
+</br><br><br>
+
+<center>
+    <% @lists.each do |list| %>
+    <div class="panel panel-default container">
+        <div class="panel-heading"><h4> Location: <%= list.name %></h4></div>
+        <div class="panel-body"><p>Informartion: <%= list.comment %></p></div>
+        <%= link_to 'Show', list %>
+      </div>
+    <% end %>
+  
+
+<br>
+
+<button class="btn btn-default navbar-btn"><%= link_to 'New Listing', new_list_path %></button><br><br><br><br>
+
+
+</br><br><br>
+</center>

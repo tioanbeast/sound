@@ -1,0 +1,13 @@
+<center><p id="zach page"><%= notice %></p>
+
+
+  <strong>Name:</strong>
+  <%= @status.name %>
+<br>
+  <strong>Content:</strong>
+  <%= @status.content %>
+
+<br>
+<%= link_to 'Edit', edit_status_path(@status) %> |
+<%= link_to 'Back', statuses_path %>
+</center>
